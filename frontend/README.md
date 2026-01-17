@@ -1,29 +1,28 @@
-# Vite & HeroUI Template
+# DB Manager - Frontend
 
-This is a template for creating applications using Vite and HeroUI (v2).
+React frontend for the DB Manager full-stack starter template.
 
-[Try it on CodeSandbox](https://githubbox.com/heroui-inc/vite-template)
+## Tech Stack
 
-## Technologies Used
+- React 18
+- HeroUI 2.8
+- TypeScript
+- Vite
+- React Router
+- Tailwind CSS
+- Framer Motion
 
-- [Vite](https://vitejs.dev/guide/)
-- [HeroUI](https://heroui.com)
-- [Tailwind CSS](https://tailwindcss.com)
-- [Tailwind Variants](https://tailwind-variants.org)
-- [TypeScript](https://www.typescriptlang.org)
-- [Framer Motion](https://www.framer.com/motion)
+## Features
 
-## How to Use
+- Dynamic table and data management UI
+- Type-aware input components (DatePicker, Switch, etc.)
+- Global search with auto-suggestions
+- Responsive design
+- Keyboard shortcuts (Ctrl+K for search)
 
-To clone the project, run the following command:
-
-```bash
-git clone https://github.com/heroui-inc/vite-template.git
-```
+## Development
 
 ### Install dependencies
-
-You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
 
 ```bash
 npm install
@@ -35,16 +34,38 @@ npm install
 npm run dev
 ```
 
-### Setup pnpm (optional)
+The frontend will start on `http://localhost:5173`.
 
-If you are using `pnpm`, you need to add the following code to your `.npmrc` file:
+### Build for production
 
 ```bash
-public-hoist-pattern[]=*@heroui/*
+npm run build
 ```
 
-After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.
+### Preview production build
 
-## License
+```bash
+npm run preview
+```
 
-Licensed under the [MIT license](https://github.com/heroui-inc/vite-template/blob/main/LICENSE).
+## Project Structure
+
+```
+src/
+├── components/     # Reusable UI components
+├── config/         # Site configuration
+├── layouts/        # Page layouts
+├── pages/          # Route pages
+├── services/       # API service layer
+└── types/          # TypeScript types
+```
+
+## API Configuration
+
+The backend API URL is configured in `src/services/api.ts`:
+
+```typescript
+const API_BASE_URL = 'http://localhost:3001/api';
+```
+
+Update this if your backend runs on a different port.
